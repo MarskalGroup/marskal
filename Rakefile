@@ -1,5 +1,6 @@
 require "bundler/gem_tasks"
 require "rake/testtask"
+load "tasks/build_docs.rake"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "test"
@@ -8,3 +9,8 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :default => :test
+
+
+
+
+
