@@ -1,5 +1,3 @@
-# gem 'yard'
-# gem 'yard'
 require 'yard'
 require 'rdoc/task'
 
@@ -25,7 +23,7 @@ RDoc::Task.new do |rdoc|
   rdoc.generator = 'hanna'
 end
 
-namespace 'Marskal' do
+namespace 'marskal' do
   namespace 'rdoc' do
     desc 'Erases /docs folder and Generates docs in all the available formats'
     task :generate_all_docs do

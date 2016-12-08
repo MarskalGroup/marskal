@@ -1,5 +1,12 @@
 # Changelog
 
+#### 0.1.3.wip - MAU `2016-12-07`  
+**Fooled around with running docs rake from a different gem, but failed**
+
+* Left wip code commented out, because I did have it working for a moment in time. Go back to it later
+
+---
+
 #### 0.1.2.wip - MAU `2016-12-07`  
 **Add more test units for Array extensions**
 
