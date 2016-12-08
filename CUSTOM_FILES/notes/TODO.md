@@ -1,5 +1,10 @@
 ##Todo list: Last updated `2016-12-07`  
 
+#### Left Off 12/7/2016
+* Writing Tests for Array
+* Still have a few methods to go, then clean up docs as we experiment and build our standards
+*
+
 
 ####Priorities
 * Build a marskal_suite to combine all the marskal- gems into a consolidated source

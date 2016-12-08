@@ -2,8 +2,11 @@ require "marskal/version"
 require "marskal/core_ext"
 
 require 'active_support/dependencies/autoload'
-require 'active_support/core_ext/numeric'
+
 require 'active_support/core_ext/date'
+require 'active_support/core_ext/hash'
+require 'active_support/core_ext/numeric'
+require 'active_support/json/encoding'
 
 ##
 # Marskal.

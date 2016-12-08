@@ -1,5 +1,12 @@
 # Changelog
 
+#### 0.1.2.wip - MAU `2016-12-07`  
+**Add more test units for Array extensions**
+
+* Added testing for Array Extensions
+* Added Light documentation as well
+
+---
 #### 0.1.1.wip - MAU `2016-12-07`  
 **Added core_ext and implemented documentation options for testing**
 
