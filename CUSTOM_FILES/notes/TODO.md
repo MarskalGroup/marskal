@@ -3,7 +3,7 @@
 #### Left Off 12/7/2016
 * Writing Tests for Array
 * Still have a few methods to go, then clean up docs as we experiment and build our standards
-*
+* Switch to minitest:spec possibly because class names dont work as I like for tetsing
 
 
 ####Priorities

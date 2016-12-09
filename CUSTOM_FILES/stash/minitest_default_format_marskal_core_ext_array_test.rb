@@ -17,23 +17,22 @@ class MarskalCoreExtArrayTest < Minitest::Test
   # Define the variables to be used to test in this object
   #---------------------------------------------------------
   def setup
+    puts "here I am"
     @ary = ['hello','bye','yo','whats up']
     @results = {
-        no_brackets: [@ary.to_string_no_brackets, "\"hello\", \"bye\", \"yo\", \"whats up\""],
-        no_brackets_or_quotes: [@ary.to_string_no_brackets_or_quotes, "hello, bye, yo, whats up"],
-        prepare_for_sql_in_clause: [@ary.prepare_for_sql_in_clause, "(\"hello\", \"bye\", \"yo\", \"whats up\")"]
+        no_brackets: [@ary.to_string_no_brackets, "'hello','bye','yo','whats up'"],
+        no_brackets_or_quotes: [@ary.to_string_no_brackets_or_quotes, '"hello","bye","yo"","whats up"'],
+        prepare_for_sql_in_clause: [@ary.prepare_for_sql_in_clause, 'xxxxx']
     }
+    # @nxo_brackets = @ary.to_string_no_brackets
+    # @nxo_brackets_or_quotes = @ary.to_string_no_brackets_or_quotes
+    # @pxrepare_for_sql_in_clause = @ary.prepare_for_sql_in_clause
   end
 
   #---------------------------------------------------------
   # Tests for method: to_string_no_brackets
   #---------------------------------------------------------
   begin
-
-    def test_test_to_string_no_brackets_returns_expected
-      assert_got_what_expected(@results[:no_brackets])
-    end
-
     def test_to_string_no_brackets_returns_string
       assert_kind_of String, @results[:no_brackets][GOT]
     end
@@ -51,10 +50,6 @@ class MarskalCoreExtArrayTest < Minitest::Test
   # Tests for method: to_string_no_brackets_or_quotes
   #---------------------------------------------------------
   begin
-    def test_to_string_no_brackets_or_quotes_returns_expected
-      assert_got_what_expected(@results[:no_brackets_or_quotes])
-    end
-
     def test_to_string_no_brackets_or_quotes_returns_string
       assert_kind_of String, @results[:no_brackets_or_quotes][GOT]
     end
@@ -73,11 +68,6 @@ class MarskalCoreExtArrayTest < Minitest::Test
   # Tests for method: prepare_for_sql_in_clause
   #---------------------------------------------------------
   begin
-
-    def test_prepare_for_sql_in_clause_returns_expected
-      assert_got_what_expected(@results[:prepare_for_sql_in_clause])
-    end
-
     def test_prepare_for_sql_in_clause_returns_string
       assert_kind_of String, @results[:prepare_for_sql_in_clause][GOT]
     end
@@ -110,9 +100,9 @@ class MarskalCoreExtArrayTest < Minitest::Test
   #   assert_no_brackets("[1,2,3]")  ==> An error will be raised
   #   assert_no_brackets("1,2,3")    ==> Return True
   #
-  def assert_no_brackets(p_str)
-    assert (p_str[0] != '[' && p_str[-1] != ']'), "Expected no front or end brackets, but result was:  ==> #{p_str}"
-  end
+   def assert_no_brackets(p_str)
+      assert (p_str[0] != '[' && p_str[-1] != ']'), "Expected no front or end brackets, but result was:  ==> #{p_str}"
+   end
 
   def assert_got_what_expected(p_value_array)
     assert_equal p_value_array[GOT],  p_value_array[EXPECTED]

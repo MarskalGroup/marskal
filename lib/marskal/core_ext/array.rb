@@ -1,15 +1,29 @@
 ##
-# Array. Various extensions to Ruby's Array class
+# Array. Extends functionality to Ruby's +Array+ class
+#
+# ==== History
+# * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 class Array
 
-  #converts an array to a string and strips outer brackets ex:   [1,2,3].to_string_no_brackets  ==> #returns "1,2,3"
+  ##
+  # Tests to ensure a string does not have *"["* in from or a *"]"* at the end of the string
+  #
+  # ==== History
+  # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  #
+  # ==== Returns
+  # <tt>(String)</tt> The Array as a string without brackets
+  #
+  # ==== Examples
+  #   [1,2,3].to_string_no_brackets                 ==> #returns '1,2,3'
+  #   ['one','two','three'].to_string_no_brackets   ==> #returns "\"one\", \"two\", \"three\""
+  #
   def to_string_no_brackets
     self.to_s.gsub(/[\[\]]/,'')
   end
 
-  # convert an array into a string and remove the quotes Originally developed to help 'pluck'
-  # addded sept 204 when using for datatables jquery plugin, but can be used for anything
+
   # example:  <br>
   # [1,2,3].to_string_no_brackets  ==> #returns "1,2,3"
   def to_string_no_brackets_or_quotes

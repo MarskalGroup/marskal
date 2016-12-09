@@ -5,6 +5,13 @@ gemspec
 
 gem 'hanna-nouveau', '~> 1.0', '>= 1.0.1'
 gem 'yard'
+gem 'minitest-reporters'
+
+
+# Access an IRB console on exception pages or by using <%= console %> in views
+# gem 'web-console', '~> 2.0'
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'win32console', '~> 1.3', '>= 1.3.2'
 
 
 #Note: Unless installing from a gem server like rubygems, you Have to rebuild gems and install from command line to get this to work properly

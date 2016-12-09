@@ -13,7 +13,7 @@ RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'doc/rdoc'
   # rdoc.options = "-x 'stash' -x 'test' -x 'notes' -x 'bin' -x 'Gemfile' -m 'README.md'"
   rdoc.main = "README.md"
-  rdoc.rdoc_files.include("*.md", "lib/**/*.rb", 'Gemfile.lock')
+  rdoc.rdoc_files.include("*.md", "lib/**/*.rb", "test/**/*.rb", 'Gemfile.lock')
 end
 
 RDoc::Task.new do |rdoc|
