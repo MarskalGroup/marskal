@@ -1,5 +1,18 @@
 # Changelog
 
+#### 0.1.5.wip - MAU `2016-12-14`  
+**Added Configuration and Utils Model**
+
+* Cleaned out old core_ext modules as they now exists in marskal-core_ext gem
+* Added 2 new modules
+    * Marskal::Configuration
+        * Need testing and documentation
+        * Added some methods to module Marskal as well
+    * Marskal::Utils
+        * Fully Tested and Documented
+        
+---
+
 #### 0.1.4.wip - MAU `2016-12-09`  
 **Experimenting with output formats for testing**
 

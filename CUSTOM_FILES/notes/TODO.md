@@ -1,9 +1,9 @@
 ##Todo list: Last updated `2016-12-07`  
 
-#### Left Off 12/7/2016
-* Writing Tests for Array
-* Still have a few methods to go, then clean up docs as we experiment and build our standards
-* Switch to minitest:spec possibly because class names dont work as I like for tetsing
+#### Left Off 12/14/2016
+* Writing for Marskal and Marskal::Configuration
+* Need to finish testing and documenting those modules
+* Need to then test it from a calling app
 
 
 ####Priorities

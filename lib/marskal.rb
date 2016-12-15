@@ -1,12 +1,7 @@
 require "marskal/version"
+require "marskal/configuration"
+require "marskal/utils"
 require "marskal/core_ext"
-
-require 'active_support/dependencies/autoload'
-
-require 'active_support/core_ext/date'
-require 'active_support/core_ext/hash'
-require 'active_support/core_ext/numeric'
-require 'active_support/json/encoding'
 
 ##
 # Marskal.
@@ -15,4 +10,20 @@ require 'active_support/json/encoding'
 # act as support and provide inheritance for other layers of 'marskal-???' gems and applications
 #
 module Marskal
+  class << self
+    attr_accessor :configuration
+  end
+
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  def self.reset
+    @configuration = Configuration.new
+  end
+
+  def self.configure
+    yield(configuration)
+  end
+
 end

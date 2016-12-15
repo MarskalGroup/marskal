@@ -1,3 +1,3 @@
 module Marskal
-  VERSION = "0.1.4.wip"
+  VERSION = '0.1.5.wip'
 end
